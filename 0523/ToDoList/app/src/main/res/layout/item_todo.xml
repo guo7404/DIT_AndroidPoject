@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_margin="4dp"
+    android:background="@android:drawable/editbox_background"
+    android:elevation="2dp">
+
+    <!-- Main content row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/checkBoxTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Task"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/textViewAlarmTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="알람: 12/25 14:30"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:padding="2dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Button row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/buttonEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수정"
+            android:textSize="12sp"
+            android:minHeight="36dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제"
+            android:textSize="12sp"
+            android:minHeight="36dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
