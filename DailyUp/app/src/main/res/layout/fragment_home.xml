@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- 상단 인사말 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="좋은 하루 되세요!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="16dp" />
+
+        <!-- 오늘 날짜 -->
+        <TextView
+            android:id="@+id/today_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024년 01월 01일"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- 오늘의 명언 카드 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의 명언"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/today_quote_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="성공은 준비된 기회를 만나는 것이다."
+                    android:textSize="20sp"
+                    android:textColor="#333333"
+                    android:lineSpacingExtra="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="serif" />
+
+                <TextView
+                    android:id="@+id/today_author_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- 벤자민 프랭클린"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="end"
+                    android:fontFamily="sans-serif-light" />
+
+                <!-- 액션 버튼들 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:gravity="end">
+
+                    <ImageButton
+                        android:id="@+id/bookmark_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_bookmark_border"
+                        android:contentDescription="북마크"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageButton
+                        android:id="@+id/share_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_share"
+                        android:contentDescription="공유" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 카테고리 버튼 -->
+        <Button
+            android:id="@+id/categories_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="카테고리별 명언 보기"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_rounded"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-medium" />
+
+    </LinearLayout>
+
+</ScrollView>
