@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ActivityExample">
+
+    <application
+        android:allowBackup="true"
+        android:label="ActivityExample"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".SkillsActivity" />
+        <activity android:name=".ProjectsActivity" />
+        <activity android:name=".HobbiesActivity" />
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
